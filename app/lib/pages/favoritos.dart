@@ -1,0 +1,10 @@
+class Favoritos extends StatelessWidget {
+  const Favoritos({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+    );
+  }
+}
