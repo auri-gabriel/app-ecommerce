@@ -1,3 +1,4 @@
+import 'package:app/components/horizontal_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -40,24 +41,29 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Center(
-        child: CarouselSlider(
-          options: CarouselOptions(
-            enlargeCenterPage: true,
-            enableInfiniteScroll: false,
-            autoPlay: true,
-          ),
-          items: urlImages
-              .map(
-                (e) => SizedBox(
-                  child: Image.network(
-                    e,
-                    fit: BoxFit.contain,
+      body: ListView(
+        children: [
+          CarouselSlider(
+            options: CarouselOptions(
+              height: 400,
+              enlargeCenterPage: true,
+              enableInfiniteScroll: true,
+              autoPlay: true,
+              autoPlayAnimationDuration: Duration(seconds: 2),
+            ),
+            items: urlImages
+                .map(
+                  (e) => SizedBox(
+                    child: Image.network(
+                      e,
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                ),
-              )
-              .toList(),
-        ),
+                )
+                .toList(),
+          ),
+          HorizontalList(),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -76,42 +82,54 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed("/minhaconta");
+              },
               child: ListTile(
                 title: Text('Minha Conta'),
                 leading: Icon(TablerIcons.user),
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed("/favoritos");
+              },
               child: ListTile(
                 title: Text('Favoritos'),
                 leading: Icon(Icons.favorite),
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed("/status_pedido");
+              },
               child: ListTile(
                 title: Text('Status do pedido'),
                 leading: Icon(TablerIcons.truck_delivery),
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed("/promocoes");
+              },
               child: ListTile(
                 title: Text('Promoções'),
                 leading: Icon(Icons.local_offer_outlined),
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed("/central");
+              },
               child: ListTile(
                 title: Text('Central de Atendimento'),
                 leading: Icon(Icons.help),
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed("/compra_wttp");
+              },
               child: ListTile(
                 title: Text('Compre pelo Whatsapp'),
                 leading: Icon(TablerIcons.brand_whatsapp),
