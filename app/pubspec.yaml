@@ -37,6 +37,9 @@ dependencies:
   carousel_slider: ^4.0.0
   font_awesome_flutter: ^9.1.0
   email_validator: ^2.0.1
+  fluttertoast: ^8.0.8
+  http: ^0.13.3
+  convert: ^3.0.1
 
 dev_dependencies:
   flutter_test:

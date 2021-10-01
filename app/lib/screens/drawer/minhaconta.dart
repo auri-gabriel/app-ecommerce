@@ -75,7 +75,7 @@ class MinhaConta extends StatelessWidget {
                                   borderSide: BorderSide(
                                     color: Colors.black26,
                                   )),
-                              hintText: 'Insira seu CPF ou e-mail',
+                              hintText: 'Insira seu e-mail',
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(25),
                               ),

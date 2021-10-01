@@ -35,9 +35,9 @@ class _IconHorizontalListState extends State<IconHorizontalList> {
           ),
         ],
       ),
-      margin: EdgeInsets.all(8),
-      height: 90,
-      width: 70,
+      margin: EdgeInsets.all(7),
+      height: 80,
+      width: 65,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
